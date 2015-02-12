@@ -7,8 +7,8 @@
 
 ////// Variables //////
 // + + + + + + + + + //
-$col-base = 8.3333%
-$col-gutter = 10px
+$cols = 12            // Set number of columns
+$col-gutter = 10px    // Set the gutter on either side
 
 ////// Logic //////
 // + + + + + + + //
@@ -19,6 +19,8 @@ $col-gutter = 10px
     clear: both
     content: ""
     display: table
+
+$col-base = 100% / $cols
 
 $col
   position: relative
