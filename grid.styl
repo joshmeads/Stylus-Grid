@@ -1,0 +1,78 @@
+
+//////////////////////////////////////////////////////
+/////                 Grid System                /////
+/////              Josh Meads - 2015             /////
+/////  https://github.com/joshmeads/Stylus-Grid  /////
+//////////////////////////////////////////////////////
+
+////// Variables //////
+// + + + + + + + + + //
+$col-base = 8.3333%
+$col-gutter = 10px
+
+////// Logic //////
+// + + + + + + + //
+.grid
+  position: relative
+  width 100%
+  &::after
+    clear: both
+    content: ""
+    display: table
+
+$col
+  position: relative
+  float: left
+  width: 100%
+  margin: 0
+  margin-left: $col-gutter
+  margin-right: $col-gutter
+
+.col-1
+  @extend $col
+  $col-width = floor(($col-base * 1), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-2
+  @extend $col
+  $col-width = floor(($col-base * 2), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-3
+  @extend $col
+  $col-width = floor(($col-base * 3), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-4
+  @extend $col
+  $col-width = floor(($col-base * 4), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-5
+  @extend $col
+  $col-width = floor(($col-base * 5), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-6
+  @extend $col
+  $col-width = floor(($col-base * 6), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-7
+  @extend $col
+  $col-width = floor(($col-base * 7), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-8
+  @extend $col
+  $col-width = floor(($col-base * 8), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-9
+  @extend $col
+  $col-width = floor(($col-base * 9), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-10
+  @extend $col
+  $col-width = floor(($col-base * 10), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-11
+  @extend $col
+  $col-width = floor(($col-base * 11), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
+.col-12
+  @extend $col
+  $col-width = floor(($col-base * 12), 4)
+  max-width: "calc(%s - %s)" % ($col-width ($col-gutter * 2))
